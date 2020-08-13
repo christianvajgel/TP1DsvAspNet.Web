@@ -15,6 +15,8 @@ namespace TP1DsvAspNet.Repository.Context
         public static readonly ILoggerFactory _loggerFactory =
             LoggerFactory.Create(builder => { builder.AddConsole(); });
         
+        public FriendContext(){ }   
+
         public FriendContext(DbContextOptions<FriendContext> options) : base(options) 
         { 
             
@@ -22,6 +24,7 @@ namespace TP1DsvAspNet.Repository.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            //optionsBuilder.UseSqlServer("DataSource=app.db");
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseLoggerFactory(_loggerFactory);
         }
