@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1DsvAspNet.Web", "TP1DsvAspNet.Web\TP1DsvAspNet.Web.csproj", "{92555A78-48F9-4ACC-AED0-E17255BE2123}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TP1DsvAspNet.Web", "TP1DsvAspNet.Web\TP1DsvAspNet.Web.csproj", "{92555A78-48F9-4ACC-AED0-E17255BE2123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1DsvAspNet.ApplicationService", "TP1DsvAspNet.ApplicationService\TP1DsvAspNet.ApplicationService.csproj", "{D9195BA1-57BD-4E13-8FAC-66C99117D2E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1DsvAspNet.Domain", "TP1DsvAspNet.Domain\TP1DsvAspNet.Domain.csproj", "{5162AB90-532F-4945-B652-0903C52CBD87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1DsvAspNet.Repository", "TP1DsvAspNet.Repository\TP1DsvAspNet.Repository.csproj", "{2C1A8F5B-980C-40D3-B264-506A04B8E780}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{92555A78-48F9-4ACC-AED0-E17255BE2123}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92555A78-48F9-4ACC-AED0-E17255BE2123}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92555A78-48F9-4ACC-AED0-E17255BE2123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9195BA1-57BD-4E13-8FAC-66C99117D2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9195BA1-57BD-4E13-8FAC-66C99117D2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9195BA1-57BD-4E13-8FAC-66C99117D2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9195BA1-57BD-4E13-8FAC-66C99117D2E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5162AB90-532F-4945-B652-0903C52CBD87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5162AB90-532F-4945-B652-0903C52CBD87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5162AB90-532F-4945-B652-0903C52CBD87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5162AB90-532F-4945-B652-0903C52CBD87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C1A8F5B-980C-40D3-B264-506A04B8E780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C1A8F5B-980C-40D3-B264-506A04B8E780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C1A8F5B-980C-40D3-B264-506A04B8E780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C1A8F5B-980C-40D3-B264-506A04B8E780}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
