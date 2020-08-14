@@ -22,8 +22,8 @@ namespace TP1DsvAspNet.Web.Controllers
         // GET: FriendController
         public ActionResult Index()
         {
-            //return View(this.Services.GetAll());
-            return View();
+            return View(this.Services.GetAll());
+            //return View();
         }
 
         // GET: FriendController/Details/5
@@ -56,6 +56,22 @@ namespace TP1DsvAspNet.Web.Controllers
             catch (System.Exception ex)
             {
                 ModelState.AddModelError("APP_ERROR", ex.Message);
+                return View();
+            }
+        }
+
+        // POST: FController/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Guid id, Friend friend)
+        {
+            try
+            {
+                this.Services.Update(id, friend);
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
                 return View();
             }
         }
