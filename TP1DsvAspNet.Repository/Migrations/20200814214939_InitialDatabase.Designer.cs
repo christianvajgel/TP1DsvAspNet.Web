@@ -10,7 +10,7 @@ using TP1DsvAspNet.Repository.Context;
 namespace TP1DsvAspNet.Repository.Migrations
 {
     [DbContext(typeof(FriendContext))]
-    [Migration("20200813215017_InitialDatabase")]
+    [Migration("20200814214939_InitialDatabase")]
     partial class InitialDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
