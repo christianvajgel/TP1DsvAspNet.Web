@@ -20,16 +20,22 @@ namespace TP1DsvAspNet.Web.Controllers
         }
 
         // GET: FriendController
+        [ResponseCache(Duration = 3600, Location = ResponseCacheLocation.Client)]
         public ActionResult Index()
         {
             return View(this.Services.GetAll());
             //return View();
         }
 
-        // GET: FriendController/Details/5
         public ActionResult Details(Guid id)
         {
             return View(this.Services.GetFriendById(id));
+        }
+
+        [ResponseCache(Duration = 3600, Location = ResponseCacheLocation.Client)]
+        public ActionResult List()
+        {
+            return View(this.Services.GetAll());
         }
 
         // GET: FriendController/Create
