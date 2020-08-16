@@ -2,60 +2,112 @@
 
 @{
     ViewData["Title"] = "Index";
+    var i = 0;
+}
+
+@section scripts {
+
+    <script>
+
+
+        function CheckValue() {
+
+            var names = document.getElementsByName("friendName");
+            var surnames = document.getElementsByName("friendSurname");
+            var checkboxes = document.getElementsByName("friendChecked");
+
+            alert("Lenght: " + checkboxes.length);
+            
+
+            for (let i = 0; i < checkboxes.length; i++) {
+                alert(checkboxes[i].nodeValue.toString())
+            }
+
+            //var textBoxes = document.querySelectorAll('[id^=textbox]');
+            //var textToWrite;
+            //for (var i in textBoxes) {
+            //    textToWrite = textBoxes[i].value;
+            //    /* do your thing */
+            //}
+
+
+            //alert(document.getElementById("friendName").innerHTML);
+
+        }
+
+
+
+    </script>
+
+}
+
+@{
+
+//static void CheckValue()
+//{
+
+//}
+
 }
 
 <h1>Index</h1>
 <h4 class="text-muted">Name - Surname - Email</h4>
 
-<div>
-    <h4>Friend</h4>
-    <hr />
+<body>
+    <div>
+        <h4>Friend</h4>
+        <hr />
 
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
-    <p>
-        <a asp-action="List">List</a>
-    </p>
-    <table class="table table-dark table-hover" style="text-align: center;">
-        <thead>
-            <tr>
-                <th>Select</th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Surname)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Email)
-                </th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+        <p>
+            <a asp-action="List">List</a>
+        </p>
+        <table class="table table-dark table-hover" style="text-align: center;">
+            <thead>
                 <tr>
-                    <td>
-                        <input type="checkbox" id="friendChecked" name="friendChecked">
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Surname)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Email)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                    </td>
+                    <th>Select</th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Surname)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>Action</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <input type="checkbox" onchange="CheckValue()" class="friendChecked" name="friendChecked">
+                        </td>
+                        <td>
+                            <span name="friendName">@Html.DisplayFor(modelItem => item.Name)</span>
+                        </td>
+                        <td>
+                            <span name="friendSurname">@Html.DisplayFor(modelItem => item.Surname)</span>
+                        </td>
+                        <td>
+                            <span name="friendEmail">@Html.DisplayFor(modelItem => item.Email)</span>
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        </td>
+                    </tr>
+                    i++;
+                }
+            </tbody>
+        </table>
+
+         
+    </div>
+</body>
+
