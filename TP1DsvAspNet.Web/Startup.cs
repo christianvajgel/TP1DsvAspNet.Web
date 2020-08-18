@@ -37,6 +37,8 @@ namespace TP1DsvAspNet.Web
                 opt.UseSqlServer(Configuration.GetConnectionString("FriendDatabase"));
             });
 
+            services.AddSession();
+
             services.AddControllersWithViews();
         }
 
@@ -57,6 +59,8 @@ namespace TP1DsvAspNet.Web
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseSession();
 
             app.UseAuthorization();
 
